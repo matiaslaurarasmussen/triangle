@@ -31,4 +31,8 @@ public class Triangle {
 
         return firstSide + secondSide > thirdSide;
     }
+
+    public boolean isEquilateral() {
+        return true;
+    }
 }

@@ -33,6 +33,7 @@ public class Triangle {
     }
 
     public boolean isEquilateral() {
-        return true;
+        long distinctSideLengths = this.edges.stream().distinct().count();
+        return distinctSideLengths == 1;
     }
 }

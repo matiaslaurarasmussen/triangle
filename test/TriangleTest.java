@@ -15,6 +15,5 @@ public class TriangleTest {
 
         Assert.assertFalse(scaleneTriangle.isEquilateral());
         Assert.assertTrue(equilateralTriangle.isEquilateral());
-
     }
 }

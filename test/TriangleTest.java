@@ -31,4 +31,11 @@ public class TriangleTest {
         Assert.assertTrue(isoscelesTriangle.isIsosceles());
         Assert.assertFalse(equilateralTriangle.isIsosceles());
     }
+
+    @Test
+    public void testScaleneTriangle() {
+        Assert.assertTrue(scaleneTriangle.isScalene());
+        Assert.assertFalse(isoscelesTriangle.isScalene());
+        Assert.assertFalse(equilateralTriangle.isScalene());
+    }
 }

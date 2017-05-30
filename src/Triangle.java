@@ -43,4 +43,9 @@ public class Triangle {
     public boolean isIsosceles() {
         return getNumberOfDistinctSides() == 2;
     }
+
+    public boolean isScalene() {
+
+        return false;
+    }
 }

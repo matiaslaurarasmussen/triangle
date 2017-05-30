@@ -33,12 +33,14 @@ public class Triangle {
     }
 
     public boolean isEquilateral() {
-        long distinctSideLengths = this.edges.stream().distinct().count();
-        return distinctSideLengths == 1;
+        return getNumberOfDistinctSides() == 1;
+    }
+
+    private long getNumberOfDistinctSides() {
+        return this.edges.stream().distinct().count();
     }
 
     public boolean isIsosceles() {
-        long distinctSideLengths = this.edges.stream().distinct().count();
-        return distinctSideLengths == 2;
+        return getNumberOfDistinctSides() == 2;
     }
 }

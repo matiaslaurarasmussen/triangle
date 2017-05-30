@@ -1,7 +1,17 @@
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
 public class TriangleTest {
+
+    Triangle scaleneTriangle, equilateralTriangle, isoscelesTriangle;
+
+    @Before
+    public void initialize() {
+        scaleneTriangle = new Triangle(3.0,9.0,8.0);
+        equilateralTriangle = new Triangle(3.0,3.0,3.0);
+        isoscelesTriangle = new Triangle(3.0,3.0,5.0);
+    }
 
     @Test(expected=IllegalArgumentException.class)
     public void testCannotCreateInvalidTriangles() {
@@ -10,19 +20,13 @@ public class TriangleTest {
 
     @Test
     public void testEquilateralTriangle() {
-        Triangle scaleneTriangle = new Triangle(3.0,9.0,8.0);
-        Triangle equilateralTriangle = new Triangle(3.0,3.0,3.0);
-
         Assert.assertFalse(scaleneTriangle.isEquilateral());
+        Assert.assertFalse(isoscelesTriangle.isEquilateral());
         Assert.assertTrue(equilateralTriangle.isEquilateral());
     }
 
     @Test
     public void testIsoscelesTriangle() {
-        Triangle scaleneTriangle = new Triangle(3.0,9.0,8.0);
-        Triangle equilateralTriangle = new Triangle(3.0,3.0,3.0);
-        Triangle isoscelesTriangle = new Triangle(3.0,3.0,5.0);
-
         Assert.assertFalse(scaleneTriangle.isIsosceles());
         Assert.assertTrue(isoscelesTriangle.isIsosceles());
         Assert.assertFalse(equilateralTriangle.isIsosceles());

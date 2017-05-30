@@ -36,4 +36,9 @@ public class Triangle {
         long distinctSideLengths = this.edges.stream().distinct().count();
         return distinctSideLengths == 1;
     }
+
+    public boolean isIsosceles() {
+        return false;
+
+    }
 }

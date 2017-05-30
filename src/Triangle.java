@@ -45,7 +45,6 @@ public class Triangle {
     }
 
     public boolean isScalene() {
-
-        return false;
+        return getNumberOfDistinctSides() == 3;
     }
 }
